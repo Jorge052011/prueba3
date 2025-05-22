@@ -12,14 +12,17 @@ else:
         print("Fin")
     else:
         print("Administrar 5 ventilaciones y llamar a ambulancia")
-        respuesta = input("¿Tiene signos de vida? (s/n): ").lower()
-        if respuesta == 's':
-            respuesta = input("¿Llegó la ambulancia? (s/n): ").lower()
-            if respuesta == 's':
+
+        signos_vida = input("¿Tiene signos de vida? (s/n): ").lower()
+        while signos_vida == 's':
+            ambulancia = input("¿Llegó la ambulancia? (s/n): ").lower()
+            if ambulancia == 's':
                 print("Fin")
+                break
             else:
                 print("Reevaluar a la espera de la ambulancia")
-        else:
+                signos_vida = input("¿Tiene signos de vida? (s/n): ").lower()
+
+        if signos_vida != 's':
             print("Administrar compresiones torácicas hasta que llegue la ambulancia")
-
-
+            print("Fin")
