@@ -15,14 +15,21 @@ else:
 
         signos_vida = input("¿Tiene signos de vida? (s/n): ").lower()
         while signos_vida == 's':
+            print("reevaluar a la espera  ")
             ambulancia = input("¿Llegó la ambulancia? (s/n): ").lower()
             if ambulancia == 's':
                 print("Fin")
                 break
             else:
-                print("Reevaluar a la espera de la ambulancia")
-                signos_vida = input("¿Tiene signos de vida? (s/n): ").lower()
+                print("administrar compresiones toracicas   ")
+                ambulancia = input("¿llegó la ambulancia? (s/n): ").lower()
 
-        if signos_vida != 's':
+        while signos_vida != 's':
             print("Administrar compresiones torácicas hasta que llegue la ambulancia")
-            print("Fin")
+            ambulancia1 = input("¿Llegó la ambulancia? (s/n): ").lower()
+            if ambulancia1 != 's':
+                signos_vida = input("tiene signos de vida?")
+                ambulancia1 = input("llego la ambulancia?").lower
+                elif ambulancia1 = 's':
+                    print("fin")
+                    break
